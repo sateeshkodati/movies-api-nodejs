@@ -5,7 +5,6 @@
 * [Express.js](https://expressjs.com/)
 * [Axios](https://github.com/mzabriskie/axios) Promise based HTTP client
 * [eslint](https://eslint.org/) code linting
-* [jest](https://facebook.github.io/jest/) testing framework
 * [pm2](http://pm2.keymetrics.io/) Nodejs production process manger
 
 ## Prerequisites
