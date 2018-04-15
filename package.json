@@ -2,9 +2,19 @@
   "name": "zumepizza-movies-api",
   "version": "0.0.1",
   "description": "sample movies web api",
-  "main": "src/index.js",
   "scripts": {
+    "start:prod": "pm2 start process.yml",
+    "start": "node ./bin/server",
+    "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=6.10.0"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sateeshkodati/movies-api-sample.git"
   },
   "author": "Sateesh Kodati",
   "license": "ISC",
@@ -14,12 +24,12 @@
     "config": "^1.30.0",
     "express": "^4.16.3",
     "method-override": "^2.3.10",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "pm2": "^2.10.2",
+    "winston": "^2.4.1"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^5.1.0",
-    "nock": "^9.2.5"
+    "debug": "^3.1.0",
+    "eslint": "^4.19.1"
   }
 }
