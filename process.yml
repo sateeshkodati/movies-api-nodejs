@@ -1,0 +1,14 @@
+apps:
+  - script   : bin/server.js
+    instances: 3
+    exec_mode: cluster
+    watch  : true
+    env    :
+      PORT: 3000
+      NODE_ENV: development
+    env_qa:
+      PORT: 3000
+      NODE_ENV: qa
+    env_production:
+      PORT: 3000
+      NODE_ENV: production
