@@ -104,6 +104,9 @@ function getMovieCharacters(movieId) {
       return movies[movieId]
     })
     .then(movie => {
+      if (!movie) {
+        return null
+      }
       return fetchMovieCharacters(movie)
     });
 }

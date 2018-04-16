@@ -24,6 +24,11 @@ router.get('/', (req, res) => {
 router.get('/:id/characters', (req, res) => {
   movieService.getMovieCharacters(req.params.id)
     .then(characters => {
+      if (!characters) {
+        res.status(404).send({
+          message: 'movie not found'
+        })
+      }
       res.send(characters)
     })
     .catch(err => {
